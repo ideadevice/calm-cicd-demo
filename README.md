@@ -24,19 +24,7 @@
 
 ## Vendoring Dependencies
 
-Vendoring is handled by a separate project: [github.com/tools/godep](https://github.com/tools/godep).
-
-Here's a quick tutorial on how to use it. For more details, read the readme [here](https://github.com/tools/godep#godep).
-```
-# Save all your dependencies after running go get ./...
-godep save ./...
-
-# Building with godep
-godep go build
-
-# Running tests with godep
-godep go test ./...
-```
+Vendoring is handled by a separate project: [Glide](https://github.com/Masterminds/glide).
 
 
 ## Running in Vagrant
