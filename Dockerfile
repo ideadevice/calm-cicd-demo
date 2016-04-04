@@ -1,7 +1,9 @@
 FROM golang
 
-# Fetch dependencies
-RUN go get github.com/tools/godep
+# Install glide
+RUN go get github.com/Masterminds/glide
+RUN go build github.com/Masterminds/glide
+
 
 # Add project directory to Docker image.
 ADD . /go/src/github.com/ideadevice/calm-cicd-demo
@@ -16,7 +18,7 @@ ENV DSN postgres://baljanak@localhost:5432/calm-cicd-demo?sslmode=disable
 
 WORKDIR /go/src/github.com/ideadevice/calm-cicd-demo
 
-RUN godep go build
+RUN glide install
 
 EXPOSE 8888
 CMD ./calm-cicd-demo
