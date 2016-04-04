@@ -1,0 +1,61 @@
+package: github.com/ideadevice/calm-cicd-demo
+import:
+- package: github.com/BurntSushi/toml
+  version: bbd5bb678321a0d6e58f1099321dfa73391c1b6f
+- package: github.com/Sirupsen/logrus
+  version: 4b6ea7319e214d98c938f12692336f7ca9348d6b
+- package: github.com/carbocation/interpose
+  version: 50c09d12f8624ab10532f931cb630d0bf5f7c2c7
+- package: github.com/gorilla/context
+  version: 1ea25387ff6f684839d82767c1733ff4d4d15d0a
+- package: github.com/gorilla/mux
+  version: 0eeaf8392f5b04950925b8a69fe70f110fa7cbfc
+- package: github.com/gorilla/securecookie
+  version: 8dacca26977607e637262eb66b15b7d39f2d3009
+- package: github.com/gorilla/sessions
+  version: 8cd570d8b4ed84b18bca9d8c3ae2db55885ccd8b
+- package: github.com/hashicorp/hcl
+  version: 2604f3bda7e8960c1be1063709e7d7f0765048d0
+  subpackages:
+  - hcl/ast
+  - hcl/parser
+  - hcl/scanner
+  - hcl/strconv
+  - hcl/token
+  - json/parser
+  - json/scanner
+  - json/token
+- package: github.com/jmoiron/sqlx
+  version: 398dd5876282499cdfd4cb8ea0f31a672abe9495
+  subpackages:
+  - reflectx
+- package: github.com/kr/pretty
+  version: add1dbc86daf0f983cd4a48ceb39deb95c729b67
+- package: github.com/kr/text
+  version: bb797dc4fb8320488f47bf11de07a733d7233e1f
+- package: github.com/magiconair/properties
+  version: c265cfa48dda6474e208715ca93e987829f572f8
+- package: github.com/mitchellh/mapstructure
+  version: d2dd0262208475919e1a362f675cfc0e7c10e905
+- package: github.com/spf13/cast
+  version: 27b586b42e29bec072fe7379259cc719e1289da6
+- package: github.com/spf13/jwalterweatherman
+  version: 33c24e77fb80341fe7130ee7c594256ff08ccc46
+- package: github.com/spf13/pflag
+  version: 7f60f83a2c81bc3c3c0d5297f61ddfa68da9d3b7
+- package: github.com/spf13/viper
+  version: c975dc1b4eacf4ec7fdbf0873638de5d090ba323
+- package: github.com/tylerb/graceful
+  version: 9a3d4236b03bb5d26f7951134d248f9d5510d599
+- package: golang.org/x/net
+  version: 35b06af0720201bc2f326773a80767387544f8c4
+  subpackages:
+  - netutil
+- package: golang.org/x/sys
+  version: a60af9cbbc6ab800af4f2be864a31f423a0ae1f2
+  subpackages:
+  - unix
+- package: gopkg.in/fsnotify.v1
+  version: 875cf421b32f8f1b31bd43776297876d01542279
+- package: gopkg.in/yaml.v2
+  version: a83829b6f1293c91addabc89d0571c246397bbf4
