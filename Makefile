@@ -3,7 +3,7 @@ REPO = $(shell basename `git rev-parse --show-toplevel`)
 
 image:
         # build docker image
-	docker build --pull=true -t "calmio/${REPO}:${TAG}" .
+	docker build --pull=true -t "calmio/${REPO}:latest" .
 
         # test docker image
         # ToDO
