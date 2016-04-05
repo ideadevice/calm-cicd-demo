@@ -1,6 +1,6 @@
 ## Installation
 
-1. Install Go 1.5.x or greater, git, setup `$GOPATH`, and `PATH=$PATH:$GOPATH/bin`
+1. Install Go 1.4.x or greater, git, setup `$GOPATH`, and `PATH=$PATH:$GOPATH/bin`
 
 2. Run the server
     ```
