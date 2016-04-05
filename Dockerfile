@@ -18,6 +18,7 @@ ENV DSN postgres://baljanak@localhost:5432/calm-cicd-demo?sslmode=disable
 WORKDIR /go/src/github.com/ideadevice/calm-cicd-demo
 
 RUN glide install
+RUN go build
 
 EXPOSE 8888
 CMD ./calm-cicd-demo
