@@ -4,7 +4,6 @@ FROM golang
 RUN go get github.com/Masterminds/glide
 RUN go build github.com/Masterminds/glide
 
-
 # Add project directory to Docker image.
 ADD . /go/src/github.com/ideadevice/calm-cicd-demo
 
