@@ -9,4 +9,4 @@ image:
         # ToDO
 
         # push docker image
-	docker push "calmio/${REPO}:${TAG}"
+	docker push "calmio/${REPO}:latest"
