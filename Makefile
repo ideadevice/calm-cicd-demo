@@ -3,10 +3,10 @@ REPO = $(shell basename `git rev-parse --show-toplevel`)
 
 image:
         # build docker image
-	docker build --pull=true -t "baljanak/${REPO}:${TAG}" .
+	docker build --pull=true -t "calmio/${REPO}:${TAG}" .
 
         # test docker image
         # ToDO
 
         # push docker image
-	docker push "baljanak/${REPO}:${TAG}"
+	docker push "calmio/${REPO}:${TAG}"
