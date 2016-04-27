@@ -8,7 +8,7 @@ RUN go build github.com/Masterminds/glide
 ADD . /go/src/github.com/ideadevice/calm-cicd-demo
 
 ENV USER baljanak
-ENV HTTP_ADDR :8888
+ENV HTTP_ADDR :80
 ENV HTTP_DRAIN_INTERVAL 1s
 ENV COOKIE_SECRET sk3ZUyR8rSv0qRO7
 
