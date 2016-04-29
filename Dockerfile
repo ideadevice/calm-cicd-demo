@@ -17,5 +17,7 @@ WORKDIR /go/src/github.com/ideadevice/calm-cicd-demo
 RUN glide install
 RUN go build
 
+ADD ./bin/etcdctl /bin/
+
 EXPOSE 80
 CMD ./calm-cicd-demo
