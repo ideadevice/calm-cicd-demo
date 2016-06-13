@@ -1,12 +1,9 @@
-TAG = $(shell git describe --always --tag)
-IMAGE_REPO = "cicd-demo"
+TAG = $(shell head version/version)
+IMAGE_REPO = calmio/cicd-demo
 
 image:
         # build docker image
-	docker build --pull=true -t "calmio/${IMAGE_REPO}:latest" .
-
-        # test docker image
-        # ToDO
+	docker build --pull=true -t "${IMAGE_REPO}:${TAG}" .
 
         # push docker image
-	docker push "calmio/${IMAGE_REPO}:latest"
+	docker push "${IMAGE_REPO}:${TAG}"
