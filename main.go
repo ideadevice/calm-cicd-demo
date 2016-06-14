@@ -1,11 +1,12 @@
 package main
 
 import (
+	"net/http"
+	"time"
+
 	"github.com/Sirupsen/logrus"
 	"github.com/spf13/viper"
 	"github.com/tylerb/graceful"
-	"net/http"
-	"time"
 
 	"github.com/ideadevice/calm-cicd-demo/application"
 )

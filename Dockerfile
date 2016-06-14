@@ -12,6 +12,10 @@ ENV HTTP_ADDR :80
 ENV HTTP_DRAIN_INTERVAL 1s
 ENV COOKIE_SECRET sk3ZUyR8rSv0qRO7
 
+ARG APP_VERSION
+ENV VERSION ${APP_VERSION}
+
+
 WORKDIR /go/src/github.com/ideadevice/calm-cicd-demo
 
 RUN glide install

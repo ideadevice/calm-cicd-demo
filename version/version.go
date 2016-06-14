@@ -1,20 +1,21 @@
 package version
 
 import (
-	"io/ioutil"
+	"github.com/Sirupsen/logrus"
+	"github.com/spf13/viper"
 )
 
 type Version struct {
 	VersionName string
 }
 
-func read_version() Version {
-	file := "version"
+func ReadVersion() Version {
+	c := viper.New()
+	c.SetDefault("version", "<dev>")
+	c.AutomaticEnv()
+	version_name := c.Get("version").(string)
 	v := Version{}
-	b, err := ioutil.ReadFile(file)
-	if err != nil {
-		panic(err)
-	}
-	v.VersionName = string(b)
+	v.VersionName = version_name
+	logrus.Infoln("Version: " + v.VersionName)
 	return v
 }

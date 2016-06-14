@@ -1,9 +1,11 @@
 package handlers
 
 import (
-	"github.com/ideadevice/calm-cicd-demo/libhttp"
 	"html/template"
 	"net/http"
+
+	"github.com/ideadevice/calm-cicd-demo/libhttp"
+	"github.com/ideadevice/calm-cicd-demo/version"
 )
 
 func GetHome(w http.ResponseWriter, r *http.Request) {
@@ -14,6 +16,6 @@ func GetHome(w http.ResponseWriter, r *http.Request) {
 		libhttp.HandleErrorJson(w, err)
 		return
 	}
-
-	tmpl.Execute(w, nil)
+	v := version.ReadVersion()
+	tmpl.Execute(w, v)
 }
